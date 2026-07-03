@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vihaan Thaker - Projects</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f5f5f5;
+}
+
+.navbar{
+background:white;
+padding:15px 40px;
+border-bottom:1px solid #ddd;
+display:flex;
+gap:30px;
+font-size:18px;
+}
+
+.navbar a{
+text-decoration:none;
+color:#333;
+}
+
+.container{
+display:flex;
+max-width:1100px;
+margin:40px auto;
+gap:40px;
+}
+
+.sidebar{
+width:280px;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.profile-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.sidebar h2{
+margin-top:15px;
+}
+
+.sidebar p{
+color:#666;
+}
+
+.links{
+margin-top:20px;
+}
+
+.links a{
+display:block;
+margin-bottom:8px;
+color:#0073e6;
+text-decoration:none;
+}
+
+.content{
+flex:1;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+h1{
+margin-top:0;
+}
+
+.section{
+margin-top:30px;
+}
+
+/* Internal formatting for clean lists and headings */
+.content h2 {
+border-bottom: 2px solid #eee;
+padding-bottom: 5px;
+margin-top: 30px;
+}
+
+.content h3 {
+margin-bottom: 5px;
+margin-top: 20px;
+}
+
+.content p {
+line-height: 1.5;
+color: #333;
+}
+
+.content ul {
+margin-top: 5px;
+padding-left: 20px;
+}
+
+.content li {
+margin-bottom: 8px;
+line-height: 1.5;
+color: #444;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="index.html">Home</a>
+<a href="CV.html">CV</a>
+<a href="Projects.html">Projects</a>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+
+<img src="profile.jpg" class="profile-img">
+
+<h2>Vihaan Thaker</h2>
+
+<p>
+Mechanical Engineering Undergraduate <br>
+IIT Bombay
+</p>
+
+<div class="links">
+
+📍 Mumbai, India <br><br>
+
+<a href="mailto:vihaan@iitb.ac.in">Email</a>
+<a href="https://github.com/Vihaan-Thaker">Github</a>
+<a href="https://www.linkedin.com/in/vihaan-thaker-501382320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+
+</div>
+
+</div>
+
+
+<div class="content">
+
+<h1>Projects</h1>
+
+<!-- Research Experience -->
+<div class="section">
+<h2>Research Experience</h2>
+
+<h3>Long-Context Sparse Attention</h3>
+<p style="color:#666; margin-top:-5px;"><em>SURP: Prof. Aditya Desai | IIT Bombay | May '26 - Present</em></p>
+<ul>
+<li>Built a custom Triton GPU kernel for training-free long-context sparse attention on Llama2-7B, combining per-head threshold-based token selection with RoPE Position-Interpolation repositioning inside context window.</li>
+<li>Integrated the selection into Flash Attention via a shared-tile voting scheme, with adaptive top-k% budgeting.</li>
+<li>Extended the kernel with a KV-cached decode path deployable inside HuggingFace for auto-regressive decoding.</li>
+</ul>
+
+<h3>Interpreting Two-Hop Reasoning in LLMs</h3>
+<p style="color:#666; margin-top:-5px;"><em>SURP: Prof. Debabrata Maiti | IIT Bombay | May '26 - Present</em></p>
+<ul>
+<li>Investigated Mechanistic Interpretability of two-hop factual recall in Llama3-8B, studying the representation of intermediate bridge entities and whether failed two-hop compositions can be fixed through activation back-patching.</li>
+<li>Built an interpretability pipeline on an HPC cluster, for Logit-Lens, Patchscopes & back-patching experiments.</li>
+<li>Analyzed bridge-entity representations using PCA & t-SNE, and layer-wise probing to study reasoning failures.</li>
+</ul>
+</div>
+
+<!-- Key Projects -->
+<div class="section">
+<h2>Key Projects</h2>
+
+<h3>Single Image Super-Resolution via Residual CNNs</h3>
+<p style="color:#666; margin-top:-5px;"><em>Course Project: ME228 | IIT Bombay | Jan '26 - Apr '26</em></p>
+<ul>
+<li>Engineered an end-to-end deep learning pipeline for Single Image Super Resolution (SISR), an ill-posed computer vision problem to reconstruct sharp high-resolution images from a single low-resolution input via learned patterns.</li>
+<li>Built a residual CNN with 32 skip-connection blocks, training on Sen2Venus & DIV2K dataset using L1 loss.</li>
+<li>Achieved 34.84 dB PSNR and 0.94 SSIM at ×2 upscaling, outperforming the bicubic baseline by +3.6 dB PSNR.</li>
+</ul>
+
+<h3>Wildlife Detection using Classical Computer Vision</h3>
+<p style="color:#666; margin-top:-5px;"><em>Course Project: DS203 | IIT Bombay | Aug '25 - Nov '25</em></p>
+<ul>
+<li>Built an image-based wildlife detection model using a classical ML pipeline (no neural networks) that resizes the input images, partitions them into 64 grid cells, and predicts wildlife presence at the grid level across the image.</li>
+<li>Adopted features like LAB histograms, GLCM & CLBP for texture, HOG for shape, and Canny edge detection.</li>
+<li>Employed Active Learning to iteratively train the classifier, achieving best F1 score of 0.78 with XGBoost model.</li>
+</ul>
+
+<h3>Sparse Identification of Duffing Oscillator Dynamics</h3>
+<p style="color:#666; margin-top:-5px;"><em>Self Project | Jan '26 - Mar '26</em></p>
+<ul>
+<li>Implemented Sparse Identification of Nonlinear Dynamics (SINDy) with the STLSQ optimizer to recover governing equations of unforced & forced damped Duffing oscillators, along with theoretical analysis of nonlinear dynamics.</li>
+<li>Validated the models using holdout MSE and visualized periodic & chaotic behavior through Poincaré sections.</li>
+</ul>
+
+<h3>Modeling and Simulation of Ackermann Steering</h3>
+<p style="color:#666; margin-top:-5px;"><em>Course Project: ME444 | IIT Bombay | Jan '26 - Apr '26</em></p>
+<ul>
+<li>Modeled the Ackermann steering mechanism, turning inner & outer wheels at distinct angles for smooth, scrub-free cornering, in MSC ADAMS using rigid links and revolute joints with a progressive 0°–15° steering input.</li>
+<li>Validated simulated with theoretical Ackermann angles, capturing a 67% turning-radius drop, from 5°–15° input.</li>
+</ul>
+
+<h3>Options Pricing Models and their accuracy</h3>
+<p style="color:#666; margin-top:-5px;"><em>FinSearch 2025 | Finance Club, IIT Bombay | Jun '25 - Jul '25</em></p>
+<ul>
+<li>Investigated essential Options Pricing models, like Black Scholes & Monte Carlo Simulations, to compute the theoretical fair price of Nifty 50 call options, and studied the usage of greeks like delta, theta, gamma and vega.</li>
+<li>Achieved a 15.2% average prediction error for theoretical option prices across different strike prices and expiry dates.</li>
+</ul>
+</div>
+
+<!-- Other Projects -->
+<div class="section">
+<h2>Other Projects</h2>
+
+<h3>Custom Drone Controller</h3>
+<p style="color:#666; margin-top:-5px;"><em>Course Project: MS101 | IIT Bombay | Aug '24 - Nov '24</em></p>
+<ul>
+<li>Developed a customized drone controller by designing the internal circuit, programming the ESP32 microcontroller, and enabling wireless communication for user inputs, drone control and efficient real-time command execution.</li>
+<li>Designed and 3D printed the controller in AutoDesk Fusion 360, while creating and validating PCB with EasyEDA.</li>
+</ul>
+
+<h3>Retrieval-Augmented Generation System for Linear Algebra Notes</h3>
+<p style="color:#666; margin-top:-5px;"><em>Self Project | Jan '26 - Feb '26</em></p>
+<ul>
+<li>Constructed an end-to-end RAG pipeline over Calculus & Linear Algebra notes, combining math-aware PDF extraction and metadata-tagged chunking with hybrid semantic (FAISS) & lexical retrieval plus a re-ranking stage.</li>
+<li>Deployed the system on a local web app to serve citation-backed answers powered by a locally-hosted Qwen model.</li>
+</ul>
+
+<h3>Sequence Modeling for Music Generation</h3>
+<p style="color:#666; margin-top:-5px;"><em>Self Project | Feb '26 - Mar '26</em></p>
+<ul>
+<li>Built an end-to-end PyTorch pipeline for character-level music generation, implementing dataset preprocessing, sequence vectorization, custom batching, and an LSTM-based recurrent neural network for next-character prediction.</li>
+<li>Learned sequential musical patterns using Backpropagation Through Time (BPTT) to generate novel compositions.</li>
+</ul>
+
+<h3>Chess Engine with AI Opponent</h3>
+<p style="color:#666; margin-top:-5px;"><em>Self Project | May '26 - Jun '26</em></p>
+<ul>
+<li>Constructed a chess engine from scratch in Python, implementing legal-moves generation for all pieces with special rules like castling, en passant, and pawn promotion, alongside check, checkmate, and stalemate detection.</li>
+<li>Powered the AI opponent via minimax search with alpha-beta pruning and a hand-crafted positional evaluation.</li>
+</ul>
+
+<h3>Value-at-Risk Estimation and Backtesting</h3>
+<p style="color:#666; margin-top:-5px;"><em>Self Project | Feb '26 - Mar '26</em></p>
+<ul>
+<li>Built an interactive Python Value-at-Risk (VaR) dashboard estimating 99%-confidence risk for NIFTY50 stocks through Historical, Parametric, Monte Carlo, and GARCH models fitted via Maximum Likelihood Estimation.</li>
+<li>Trained on 2021–24 and tested on 2025 data, with averaged ~1.2% breaches confirming accurate tail-risk capture.</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
